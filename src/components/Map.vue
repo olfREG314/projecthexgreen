@@ -1,6 +1,5 @@
 <template>
   <div ref="mapDiv" class="map" style="height: 100vh; width: 100vw"></div>
-  <div>abc</div>
 </template>
 <script>
 /* eslint-disable no-undef */
@@ -31,7 +30,7 @@ export default {
         () =>
           new google.maps.Map(mapDiv.value, {
             center: { lat: -34.397, lng: 150.644 },
-            zoom: 8,
+            zoom: 20,
           })
       );
     });

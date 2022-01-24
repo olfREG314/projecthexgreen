@@ -1,12 +1,5 @@
 <template>
   <div>
-    <div>
-      <button
-        class="btn btn-primary"
-        data-bs-target="#collapseTarget"
-        data-bs-toggle="collapse"
-      >Bootstrap collapse</button>
-    </div>
     <LandingPage />
     <!-- <div class="background">
       <div id="nav">
