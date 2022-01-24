@@ -12,7 +12,7 @@ export function useGeolocation() {
       watcher = navigator.geolocation.watchPosition(
         (position) => (coords.value = position.coords)
       );
-      console.log("its in if");
+      console.log("its in if" + coords.value);
     }
   });
   onUnmounted(() => {

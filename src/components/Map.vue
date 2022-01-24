@@ -1,14 +1,14 @@
 <template>
-  <div id="anc" class="map" style="height: 100vh; width: 100vw" v-cloak></div>
+  <div ref="mapDiv" class="map" style="height: 100vh; width: 100vw"></div>
+  <div>abc</div>
 </template>
 <script>
-// /* eslint-disable no-undef */
+/* eslint-disable no-undef */
 import { Loader } from "@googlemaps/js-api-loader";
-import { onMounted } from "vue";
-import window from "window";
+import { onMounted, ref, computed } from "vue";
 //window is a global var
-const google = window.google;
-// import { useGeolocation } from "@/components/useGeolocation";
+
+import { useGeolocation } from "@/components/useGeolocation";
 
 const GOOGLE_MAPS_API_KEY = "AIzaSyBFBMZrSA1l0h6rUR5ywIt6zlxLBBuD0ag";
 export default {
@@ -17,23 +17,25 @@ export default {
   },
   setup() {
     const loader = new Loader({ apiKey: GOOGLE_MAPS_API_KEY });
-
+    const mapDiv = ref(null);
     //getting my location
-    // const { coords } = useGeolocation();
-    // const currPos = computed(() => ({
-    //   lat: coords.value.latitude,
-    //   lng: coords.value.longitude,
-    // }));
-    // console.log(currPos.value);
+    const { coords } = useGeolocation();
+    const currPos = computed(() => ({
+      lat: coords.value.latitude,
+      lng: coords.value.longitude,
+    }));
+    console.log(currPos.value.lng);
     //load map
-    onMounted(async () => {
-      await loader.load().then(() => {
-        new google.maps.Map(document.getElementById("anc"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8,
-        });
-      });
+    onMounted(() => {
+      loader.load().then(
+        () =>
+          new google.maps.Map(mapDiv.value, {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+          })
+      );
     });
+    return { mapDiv };
   },
 };
 </script>
