@@ -3,8 +3,14 @@
 import { createStore } from "vuex";
 //succint meaning clearly stated
 export default createStore({
-  state: {},
-  mutations: {},
+  state: {
+    showLogin: false,
+  },
+  mutations: {
+    setLoginCmt(state, value) {
+      state.showLogin = value;
+    },
+  },
   actions: {},
   modules: {},
 });

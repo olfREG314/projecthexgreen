@@ -6,7 +6,7 @@
     <div class="landingPageInfo">
       <LandingPageInfoComponent />
     </div>
-    <div class="login-component">
+    <div v-if="$store.state.showLogin" class="login-component">
       <LoginComponent />
     </div>
   </div>

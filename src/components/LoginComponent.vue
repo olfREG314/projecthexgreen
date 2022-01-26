@@ -50,15 +50,22 @@
           </div>
         </div>
         <div class="col-1 cancel-btn" style="">
-          <i class="bi bi-x-circle"></i>
+          <button class="btn btn-outline-danger" @click="hideLoginCmt()">
+            <i class="bi bi-x-circle"></i>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-console.log("its here");
-export default {};
+export default {
+  methods: {
+    hideLoginCmt() {
+      this.$store.commit("setLoginCmt", false);
+    },
+  },
+};
 </script>
 <style scoped>
 .justForCenter {
@@ -86,13 +93,10 @@ export default {};
   display: flex;
   position: relative;
 }
-.btn {
+.createAccount-btn .btn {
   width: 200px;
 }
-.info {
-  /* align-items: center;
-  justify-content: center; */
-}
+
 .cancel-btn {
   width: 30px;
   color: red;

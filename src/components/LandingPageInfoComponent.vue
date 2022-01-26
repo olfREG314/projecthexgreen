@@ -17,7 +17,7 @@
             <button
               type="button"
               class="btn btn-primary"
-              @click="showLoginComponent()"
+              @click="showLoginCmt()"
             >
               Get Helping Hand
             </button>
@@ -34,19 +34,12 @@
 </template>
 <script>
 export default {
-  // setup() {},
   data() {
-    return {
-      isGetHelpingHandTriggered: false,
-      isGiveHelpingHandTriggered: false,
-    };
+    return {};
   },
   methods: {
-    showLoginComponent() {
-      console.log("get to login page");
-      this.isGetHelpingHandTriggered = true;
-      console.log(this.isGetHelpingHandTriggered);
-      // this.$router.push({ path: "LoginComponent" });
+    showLoginCmt() {
+      this.$store.commit("setLoginCmt", true);
     },
   },
 };
