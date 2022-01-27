@@ -7,7 +7,8 @@
       <MapComponent />
     </div>
     <div class="landingPageInfo">
-      <LandingPageInfoComponent />
+      <LandingPageInfoComponent v-if="$store.state.usernotLoggedIn" />
+      <AccountPage v-else />
     </div>
     <div v-if="$store.state.showLogin" class="login-component">
       <LoginComponent />
@@ -19,12 +20,14 @@ import MapComponent from "@/components/MapComponent.vue";
 import LandingPageInfoComponent from "@/components/LandingPageInfoComponent.vue";
 import LoginComponent from "@/components/LoginComponent";
 import NavBarCmt from "@/components/NavBarCmt";
+import AccountPage from "@/views/AccountPage";
 export default {
   components: {
     MapComponent,
     LandingPageInfoComponent,
     LoginComponent,
     NavBarCmt,
+    AccountPage,
   },
 };
 </script>

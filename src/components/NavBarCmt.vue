@@ -2,7 +2,12 @@
   <div class="navbar">
     <div class="container-fluid justify-content-end">
       <span href="#" class="navbar-brand m-0 p-0 h1">projectHexGreen</span>
-      <button class="btn" data-bs-toggle="tooltip" v-bind:title="name">
+      <button
+        class="btn"
+        data-bs-toggle="tooltip"
+        v-bind:title="name"
+        @click="showAccountPage()"
+      >
         <i class="bi bi-person-circle"></i>
       </button>
     </div>
@@ -15,6 +20,7 @@ export default {
       name: this.$store.state.user.displayName,
     };
   },
+  methods: { showAccountPage() {} },
 };
 </script>
 <style>

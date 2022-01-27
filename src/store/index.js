@@ -5,18 +5,26 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     showLogin: false,
-    userLoggedIn: false,
+    usernotLoggedIn: true,
     user: [],
+    showAccountPage: false,
+    showRegisterCmt: false,
   },
   mutations: {
     setLoginCmt(state, value) {
       state.showLogin = value;
     },
     setUserLoggedIn(state, value) {
-      state.userLoggedIn = value;
+      state.usernotLoggedIn = value;
     },
     setUser(state, value) {
       state.user = value;
+    },
+    showAccountPage(state, value) {
+      state.showAccountPage = value;
+    },
+    showRegister(state, value) {
+      state.showRegisterCmt = value;
     },
   },
   actions: {},

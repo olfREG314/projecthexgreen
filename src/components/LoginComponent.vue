@@ -73,7 +73,7 @@ export default {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider).then((result) => {
         this.$store.commit("setUser", result.user);
-        this.$store.commit("setUserLoggedIn", true);
+        this.$store.commit("setUserLoggedIn", false);
         alert("you are logged in");
         this.$store.commit("setLoginCmt", false);
       });
