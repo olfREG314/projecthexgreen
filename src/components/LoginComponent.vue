@@ -40,13 +40,15 @@
             <span>-------- or --------</span>
           </div>
           <div class="autoGoogleLogin">
-            <img
-              src="@/assets/googleLogo.png"
-              alt=""
-              srcset=""
-              style="width: 30px"
-              class="m-2"
-            />
+            <button class="btn" @click="googleAuthLogin()">
+              <img
+                src="@/assets/googleLogo.png"
+                alt=""
+                srcset=""
+                style="width: 30px"
+                class="m-2"
+              />
+            </button>
           </div>
         </div>
         <div class="col-1 cancel-btn" style="">
@@ -59,10 +61,22 @@
   </div>
 </template>
 <script>
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 export default {
   methods: {
     hideLoginCmt() {
       this.$store.commit("setLoginCmt", false);
+    },
+    //-----------google auth login-----------------
+    googleAuthLogin() {
+      const auth = getAuth();
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(auth, provider).then((result) => {
+        this.$store.commit("setUser", result.user);
+        this.$store.commit("setUserLoggedIn", true);
+        alert("you are logged in");
+        this.$store.commit("setLoginCmt", false);
+      });
     },
   },
 };

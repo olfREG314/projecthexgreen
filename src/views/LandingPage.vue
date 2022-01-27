@@ -1,5 +1,8 @@
 <template>
   <div class="landingPage">
+    <div class="navBar">
+      <NavBarCmt />
+    </div>
     <div class="mapComponent">
       <MapComponent />
     </div>
@@ -15,11 +18,13 @@
 import MapComponent from "@/components/MapComponent.vue";
 import LandingPageInfoComponent from "@/components/LandingPageInfoComponent.vue";
 import LoginComponent from "@/components/LoginComponent";
+import NavBarCmt from "@/components/NavBarCmt";
 export default {
   components: {
     MapComponent,
     LandingPageInfoComponent,
     LoginComponent,
+    NavBarCmt,
   },
 };
 </script>
