@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <LandingPage />
-  </div>
+  <LandingPage />
 </template>
 <script>
 import LandingPage from "@/views/LandingPage.vue";
@@ -15,14 +13,7 @@ export default {
 :root {
   --primary-background-color: #2a324b;
   --primary-background-color-opacity: 0.8;
-  --primary-blue-color: #4bb3fd;
-  --primary-green-color: #62ffa1;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  --blue-color: #4bb3fd;
+  --green-color: #62ffa1;
 }
 </style>

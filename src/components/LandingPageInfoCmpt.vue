@@ -3,9 +3,12 @@
     <div class="row info-logo">
       <div class="col info-data-button">
         <div class="row info-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-          quis. Ratione dolore iste fugiat molestiae, vel ducimus aliquid fuga
-          expedita corporis doloremque illum optio enim?
+          NGO platform is website for NGOs who are in need of helping hand and
+          for the common people who want to help other for the betterment of
+          society. This platform will provide a medium to communicate between
+          these two communities. The website will allow NGO to provide volunteer
+          Work to people and a opportunity for the people to find these
+          volunteer work with ease and have a chance to give a helping hand.
         </div>
         <div class="row info-2-button">
           <div class="col give-helping-hand">

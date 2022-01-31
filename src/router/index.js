@@ -16,12 +16,10 @@ const routes = [
       import(/* webpackChunkName: "loginPage" */ "../views/AccountPage.vue"),
   },
   {
-    path: "/loginComponent",
-    name: "LoginComponent",
+    path: "/loginCmpt",
+    name: "LoginCmpt",
     component: () =>
-      import(
-        /* webpackChunkName: "loginPage" */ "../components/LoginComponent.vue"
-      ),
+      import(/* webpackChunkName: "loginPage" */ "../components/LoginCmpt.vue"),
   },
 ];
 

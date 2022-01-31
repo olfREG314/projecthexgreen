@@ -8,7 +8,7 @@ export default createStore({
     usernotLoggedIn: true,
     user: [],
     showAccountPage: false,
-    showRegisterCmt: false,
+    showRegisterCmt: true,
   },
   mutations: {
     setLoginCmt(state, value) {

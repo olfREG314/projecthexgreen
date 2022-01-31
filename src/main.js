@@ -25,6 +25,8 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = getFirestore();
 export { db };
+
+//including modules
 const app = createApp(App);
 app.use(store);
 app.use(router);
